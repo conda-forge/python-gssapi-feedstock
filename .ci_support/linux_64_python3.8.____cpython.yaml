@@ -9,7 +9,7 @@ channel_targets:
 docker_image:
 - condaforge/linux-anvil-comp7
 krb5:
-- '1.16'
+- 1.17.1
 pin_run_as_build:
   krb5:
     max_pin: x.x

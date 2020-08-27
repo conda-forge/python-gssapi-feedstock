@@ -9,7 +9,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 krb5:
-- '1.16'
+- 1.17.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
