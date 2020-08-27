@@ -2,7 +2,7 @@
 {% set version = "1.6.9" %}
 
 package:
-  name: python-gssapi
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
