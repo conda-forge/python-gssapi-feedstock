@@ -26,7 +26,6 @@ requirements:
   run:
     - python
     - decorator
-    - six >=1.4
 
 test:
   imports:
