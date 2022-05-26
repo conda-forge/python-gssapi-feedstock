@@ -14,9 +14,14 @@ source:
 build:
   number: 1
   script: {{ PYTHON }} -m pip install . -vv  # [not win]
+  script_env:
+    - GSSAPI_SUPPORT_DETECT=false  # [build_platform != target_platform]
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
