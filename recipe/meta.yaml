@@ -1,5 +1,5 @@
 {% set name = "gssapi" %}
-{% set version = "1.7.3" %}
+{% set version = "1.8.0" %}
 
 package:
   name: python-gssapi
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c69b9f633a0c03c1b84ba14c73b0ec132f6323056e675702c1a5f75f316e06fb
+  sha256: f47ad4969f238e4e8edad0259965dc275f9a67d62cca7262aca946a7a81518e2
   patches:
     - 0001-fix-setup.patch
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv  # [not win]
   script_env:
     - GSSAPI_SUPPORT_DETECT=false  # [build_platform != target_platform]
