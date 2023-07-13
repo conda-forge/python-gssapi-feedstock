@@ -1,11 +1,11 @@
-About python-gssapi
-===================
+About python-gssapi-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-gssapi-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pythongssapi/python-gssapi
 
 Package license: ISC
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/python-gssapi-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python interface to RFC 2743/2744 (plus common extensions)
 
