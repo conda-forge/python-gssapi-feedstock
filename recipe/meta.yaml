@@ -21,11 +21,11 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython >=0.29.29,<3.0.0a0              # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
-    - cython
+    - cython >=0.29.29,<3.0.0a0
     - krb5
     - pip
   run:
