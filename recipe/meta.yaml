@@ -12,7 +12,7 @@ source:
     - 0001-fix-setup.patch
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv  # [not win]
   script_env:
     - GSSAPI_SUPPORT_DETECT=false  # [build_platform != target_platform]
@@ -21,11 +21,11 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython                                 # [build_platform != target_platform]
+    - cython >=0.29.29,<3.0.0a0              # [build_platform != target_platform]
     - {{ compiler('c') }}
   host:
     - python
-    - cython
+    - cython >=0.29.29,<3.0.0a0
     - krb5
     - pip
   run:
