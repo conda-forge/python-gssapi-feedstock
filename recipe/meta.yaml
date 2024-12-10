@@ -6,13 +6,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f468fac8f3f5fca8f4d1ca19e3cd4d2e10bd91074e7285464b22715d13548afe
   patches:
     - 0001-fix-setup.patch
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv  # [not win]
   script_env:
     - GSSAPI_SUPPORT_DETECT=false  # [build_platform != target_platform]
@@ -21,14 +21,15 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - cython >=0.29.29,<3.0.0a0              # [build_platform != target_platform]
+    - cython >=3.0.3,<4.0.0a0                # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
-    - cython >=0.29.29,<3.0.0a0
+    - cython >=3.0.3,<4.0.0a0
     - krb5
     - pip
+    - setuptools >=40.6.0
   run:
     - python
     - decorator
