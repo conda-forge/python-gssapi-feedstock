@@ -1,5 +1,5 @@
 {% set name = "gssapi" %}
-{% set version = "1.10.0" %}
+{% set version = "1.10.1" %}
 
 package:
   name: python-gssapi
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f1495e0dc20bee3ad2839724d98ae723c7dae78c1ddea37a7c861c3c4bd77763
+  sha256: 7b54335dc9a3c55d564624fb6e25fcf9cfc0b80296a5c51e9c7cf9781c7d295b
   patches:
     - 0001-fix-setup.patch
 
